@@ -38,10 +38,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="5ai-R7-7Pq" kind="show" identifier="moveToComplete" id="eJ9-zs-ZtU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34P-Hi-Bz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084.0579710144928" y="39.508928571428569"/>
+            <point key="canvasLocation" x="1012" y="40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NYr-1Q-xtB">
@@ -130,6 +133,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHZ-7E-BcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1785.5072463768117" y="39.508928571428569"/>
+        </scene>
+        <!--Complete To Do View Controller-->
+        <scene sceneID="kWr-Yl-cpB">
+            <objects>
+                <viewController id="5ai-R7-7Pq" customClass="CompleteToDoViewController" customModule="todolist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nKv-zE-aOL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZ7-tn-bzW">
+                                <rect key="frame" x="40" y="284" width="334" height="50"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Mark This To-Do as Completed">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="completeTapped:" destination="5ai-R7-7Pq" eventType="touchUpInside" id="3aU-gs-diz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of To Do Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-Vi-sjy">
+                                <rect key="frame" x="80" y="178" width="254" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DyY-9h-iiQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eZ7-tn-bzW" firstAttribute="top" secondItem="Td9-Vi-sjy" secondAttribute="bottom" constant="70" id="G3n-eI-3v8"/>
+                            <constraint firstItem="DyY-9h-iiQ" firstAttribute="trailing" secondItem="eZ7-tn-bzW" secondAttribute="trailing" constant="40" id="Gg4-ub-wQU"/>
+                            <constraint firstItem="DyY-9h-iiQ" firstAttribute="bottom" secondItem="eZ7-tn-bzW" secondAttribute="bottom" constant="528" id="aTa-2P-cB5"/>
+                            <constraint firstItem="eZ7-tn-bzW" firstAttribute="leading" secondItem="DyY-9h-iiQ" secondAttribute="leading" constant="40" id="je0-H0-lif"/>
+                            <constraint firstItem="Td9-Vi-sjy" firstAttribute="leading" secondItem="DyY-9h-iiQ" secondAttribute="leading" constant="80" id="pK7-sh-pfK"/>
+                            <constraint firstItem="Td9-Vi-sjy" firstAttribute="top" secondItem="DyY-9h-iiQ" secondAttribute="top" constant="90" id="tWg-W4-RLa"/>
+                            <constraint firstItem="DyY-9h-iiQ" firstAttribute="trailing" secondItem="Td9-Vi-sjy" secondAttribute="trailing" constant="80" id="zfm-fP-Hcl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AI4-ur-Zqm"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Td9-Vi-sjy" id="r7I-FH-Wis"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibz-pU-Bpo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1011.5942028985507" y="758.70535714285711"/>
         </scene>
     </scenes>
     <resources>
