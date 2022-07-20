@@ -19,7 +19,7 @@ class ToDoListTableViewController: UITableViewController {
         
         }
     
-    func gettoDos() {
+    func getToDos() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
         if let coreDataToDos = try? context.fetch(ToDoCD.fetchRequest()) as? [ToDoCD] {
                 toDos = coreDataToDos
